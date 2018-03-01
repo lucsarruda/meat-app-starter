@@ -1,8 +1,12 @@
 # Meat - Angular App Starter
 
+## Demo
+Práticas do curso de Angular na Udemy
+<img src="http://g.recordit.co/6eXrtUpJxD.gif"/>
+
 ## 1. Passos para começar
 
-### Clonando o Repositório
+### Repositório original
 
 `git clone https://github.com/cod3rcursos/meat-app-starter.git`
 
