@@ -1,5 +1,7 @@
 import { Restaurant } from "./restaurant/restaurant.model";
 
+import { MEAT_API } from '../app.api'
+
 export class RestaurantsService {
 
     rests: Restaurant[] = [
@@ -23,7 +25,8 @@ export class RestaurantsService {
 
     constructor() { }
 
-    ngOnInit() {
+    restaurants(): Restaurant[] {
+        return this.rests;
     }
-
+    
 }
