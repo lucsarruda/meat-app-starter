@@ -2,7 +2,7 @@
 
 ## Demo
 Práticas do curso de Angular na Udemy
-<img src="http://g.recordit.co/6eXrtUpJxD.gif"/>
+<img src="http://g.recordit.co/HxP064fKnO.gif"/>
 
 ## 1. Passos para começar
 
