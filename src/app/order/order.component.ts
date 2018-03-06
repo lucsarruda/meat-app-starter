@@ -62,7 +62,7 @@ export class OrderComponent implements OnInit {
         this.orderService.clear()
       })
 
-    // console.log(order)
+    console.log(order)
   }
 
 }
