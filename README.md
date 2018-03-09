@@ -4,13 +4,10 @@
 Práticas do curso de Angular na Udemy
 <img src="http://g.recordit.co/5aTVmS9ruU.gif"/>
 
-### Responsivo para mobile
+### Responsivo, para mobile
 <img src="http://g.recordit.co/7YImCbNJKi.gif"/>
 
-## 1. Passos para começar
-
 ### Repositório original
-
 `git clone https://github.com/cod3rcursos/meat-app-starter.git`
 
 ### Instalando as Dependências
