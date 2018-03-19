@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
 
 import { Router } from '@angular/router';
 
@@ -46,9 +46,29 @@ export class OrderComponent implements OnInit {
       number: this.formBuilder.control('', [Validators.required, Validators.pattern(this.numberPattern)]),
       optionalAddress: this.formBuilder.control(''),
       paymentOption: this.formBuilder.control('', [Validators.required])
-    })
+    }, {validator: OrderComponent.equalsTo})
     
   }
+
+  static equalsTo(group: AbstractControl): {[key: string]: boolean}{
+
+    //obtém referências do grupo
+    const email = group.get('email')
+    const emailConfirmation = group.get('emailConfirmation')
+    
+    // checa se existem no grupo
+    if(!email || !emailConfirmation){
+      return undefined
+    }
+
+    // caso exista, checa valores, se forem diferentes retorna uma chave
+    if(email.value !== emailConfirmation.value){
+      return {emailsNotMatch: true}
+    }
+
+    return undefined
+  }
+
 
   itemsValue(): number {
     return this.orderService.itemsValue()
