@@ -40,6 +40,7 @@ import { CoreModule } from './core/core.module';
     BrowserModule,
     HttpModule,
     SharedModule,
+    CoreModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [CoreModule, {provide: LOCALE_ID, useValue: 'pt-BR'}],
