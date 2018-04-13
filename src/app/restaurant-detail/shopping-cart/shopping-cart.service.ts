@@ -14,6 +14,8 @@ export class ShoppingCartService{
 
     clear(){
         this.items = []
+
+        this.notificationService.notify(`Seu carrinho foi esvaziado!`)
     }
 
     // adiciona item no carrinho
