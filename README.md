@@ -1,11 +1,8 @@
-# Meat - Angular App Starter
+# Meat - Angular App Starter <a href="https://tiagoboeing-meat.herokuapp.com/#/">(Demo on Heroku)</a>
 
 ## Demo
 Práticas do curso de Angular na Udemy
 <img src="http://g.recordit.co/5aTVmS9ruU.gif"/>
-
-### Responsivo, para mobile
-<img src="http://g.recordit.co/7YImCbNJKi.gif"/>
 
 ### Repositório inicial
 https://github.com/cod3rcursos/meat-app-starter
