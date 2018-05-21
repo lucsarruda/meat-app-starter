@@ -32,6 +32,10 @@
     <!-- /.col -->
 
 
+    <div *ngIf="restaurants?.length === 0" class="col-xs-12">
+      <p class="lead text-center">Nenhum item encontrado na busca!</p>
+    </div>
+
   </div>
 
 </section>
