@@ -17,8 +17,10 @@ export class RestaurantsService {
     constructor(private http: Http) { }
 
     //consome a API
-    restaurants(): Observable<Restaurant[]> {
-        return this.http.get(`${MEAT_API}/restaurants`)
+    // search? -> parâmetro opcional
+    // {params: {q: search}} -> busca no serviço (JSON SERVER)
+    restaurants(search?: string): Observable<Restaurant[]> {
+        return this.http.get(`${MEAT_API}/restaurants`, {params: {q: search}})
             .map(response => response.json())
             .catch(ErrorHandler.handleError)
     }
