@@ -7,6 +7,12 @@
 Práticas do curso de Angular na Udemy
 <img src="http://g.recordit.co/5aTVmS9ruU.gif"/>
 
+## Configuração
+Ao clonar o repositório, não esqueça de rodar `npm install` para baixar/atualizar todas as dependências
+
+## Rodando backend localmente
+Para rodar o JSON Server localmente você pode utilizar: `node backend/dist/server`
+
 ### Repositório inicial
 https://github.com/cod3rcursos/meat-app-starter
 
