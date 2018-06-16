@@ -11,7 +11,7 @@ Práticas do curso de Angular na Udemy
 Ao clonar o repositório, não esqueça de rodar `npm install` para baixar/atualizar todas as dependências
 
 ## Rodando backend localmente
-Para rodar o JSON Server localmente você pode utilizar: `node backend/dist/server`
+Para rodar o JSON Server localmente você pode utilizar: `node backend/dist/server` <br>
 Rodando o JSON Server com reload automático, utilize `nodemon --watch backend backend/dist/server.js`
 
 ### Repositório inicial
