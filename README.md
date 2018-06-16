@@ -12,7 +12,7 @@ Ao clonar o repositório, não esqueça de rodar `npm install` para baixar/atual
 
 ## Rodando backend localmente
 Para rodar o JSON Server localmente você pode utilizar: `node backend/dist/server`
-Rodando o JSON Server com reload automático, utilize `nodemon --watch backend/dist/server.js`
+Rodando o JSON Server com reload automático, utilize `nodemon --watch backend backend/dist/server.js`
 
 ### Repositório inicial
 https://github.com/cod3rcursos/meat-app-starter
