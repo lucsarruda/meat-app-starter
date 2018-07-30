@@ -8,6 +8,8 @@ import { OrderService } from './order.service';
 import { CartItem } from '../restaurant-detail/shopping-cart/cart-item.model';
 import { Order, OrderItem } from './order.model';
 
+import 'rxjs/add/operator/do'
+
 @Component({
   selector: 'mt-order',
   templateUrl: './order.component.html'
@@ -20,9 +22,10 @@ export class OrderComponent implements OnInit {
 
   orderForm: FormGroup
 
-
   // em aplicação real, informado no back-end
   delivery: number = 8
+
+  orderId: string
 
 
   paymentOptions: RadioOption[] = [
@@ -93,6 +96,11 @@ export class OrderComponent implements OnInit {
   }
 
 
+  isOrderCompleted(): boolean {
+    return this.orderId !== undefined
+  }
+
+
   checkOrder(order: Order) {
     // com o map - transforma um array de cartItem em um array de OrderItem
     // pega os itens e atribui no objeto de compra
@@ -101,6 +109,9 @@ export class OrderComponent implements OnInit {
 
     // recebe objeto order e envia para o backend
     this.orderService.checkOrder(order)
+      .do((orderId: string) => {
+        this.orderId = this.orderId
+      })
       .subscribe((orderId: string) => {
         
         // redireciona para página de review
