@@ -11,6 +11,10 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
+  // btoa = encode base64
+  // atob = decode base 64
+
+
   loginForm: FormGroup
   navigateTo: string
 
@@ -25,7 +29,7 @@ export class LoginComponent implements OnInit {
       email: this.fb.control('', [Validators.required, Validators.email]),
       password: this.fb.control('', [Validators.required]),
     })
-    this.navigateTo = this.activatedRoute.snapshot.params['to'] || '/'
+    this.navigateTo = this.activatedRoute.snapshot.params['to'] || btoa('/')
   }
 
 
@@ -36,7 +40,7 @@ export class LoginComponent implements OnInit {
                                           response => //HttpErrorResponse
                                             this.notificationService.notify(response.error.message),
                                           () => {
-                                            this.router.navigate([this.navigateTo])
+                                            this.router.navigate([atob(this.navigateTo)])
                                           })
   }
 
