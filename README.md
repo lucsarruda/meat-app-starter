@@ -1,6 +1,5 @@
-# Meat - Angular App Starter <a href="https://tiagoboeing-meat.herokuapp.com/#/">(Demo on Heroku)</a>
+# Meat - Angular App Starter [Demo](https://tiagoboeing.github.io/meat-app-starter/)
 
-<p>Projeto rodando <a href="https://tiagoboeing-meat.herokuapp.com"> no Heroku</a></p>
 <p>O primeiro acesso pode levar alguns segundos, já que o Heroku 'desliga' instâncias que ficarem mais de 30 minutos sem requisições. Front-end e back-end (API) estão em instâncias separadas, sendo assim a regra se aplica a ambos.</p>
 
 ## Demo
