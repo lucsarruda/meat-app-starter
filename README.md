@@ -2,6 +2,8 @@
 
 <p>O primeiro acesso pode levar alguns segundos, já que o Heroku 'desliga' instâncias que ficarem mais de 30 minutos sem requisições. Front-end e back-end (API) estão em instâncias separadas, sendo assim a regra se aplica a ambos.</p>
 
+**Backend no Heroku. Aguarde alguns segundos para a instância ser ativada!**
+
 ## Demo
 Práticas do curso de Angular na Udemy
 <img src="http://g.recordit.co/5aTVmS9ruU.gif"/>
