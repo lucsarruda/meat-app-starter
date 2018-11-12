@@ -1,30 +1,30 @@
-import { CartItem } from "./cart-item.model";
-import { MenuItem } from "../menu-item/menu-item.model";
-import { Injectable } from "@angular/core";
-import { NotificationService } from "../../shared/messages/notification.service";
+import { CartItem } from './cart-item.model';
+import { MenuItem } from '../menu-item/menu-item.model';
+import { Injectable } from '@angular/core';
+import { NotificationService } from '../../shared/messages/notification.service';
 
-// todo serviço que irá receber algo, 
+// todo serviço que irá receber algo,
 // precisa ser marcado com @Injectable()
 @Injectable()
-export class ShoppingCartService{
+export class ShoppingCartService {
 
     items: CartItem[] = []
 
-    constructor(private notificationService: NotificationService){}
+    constructor(private notificationService: NotificationService) { }
 
-    clear(){
+    clear() {
         this.items = []
 
         this.notificationService.notify(`Seu carrinho foi esvaziado!`)
     }
 
     // adiciona item no carrinho
-    addItem(item: MenuItem){
+    addItem(item: MenuItem) {
         let foundItem = this.items.find((mItem) => mItem.menuItem.id === item.id)
 
         // verifica se já existe no carrinho
         // incrementa quantidade ou adiciona o primeiro
-        if(foundItem){
+        if (foundItem) {
             this.increaseQty(foundItem)
             // foundItem.quantity = foundItem.quantity + 1
         } else {
@@ -35,19 +35,19 @@ export class ShoppingCartService{
         this.notificationService.notify(`Você adicionou o item ${item.name}`)
     }
 
-    increaseQty(item: CartItem){
+    increaseQty(item: CartItem) {
         item.quantity = item.quantity + 1
     }
 
-    decreaseQty(item: CartItem){
+    decreaseQty(item: CartItem) {
         item.quantity = item.quantity - 1
-        
-        if(item.quantity === 0){
+
+        if (item.quantity === 0) {
             this.removeItem(item)
         }
     }
 
-    removeItem(item: CartItem){
+    removeItem(item: CartItem) {
         // remove a partir do item que estou
         // neste caso um item (, 1)
         this.items.splice(this.items.indexOf(item), 1)
@@ -57,13 +57,13 @@ export class ShoppingCartService{
     }
 
     // soma
-    total(): number{
+    total(): number {
 
         // 1 - faz um map (troca de item para um valor) ==> quant * preço unitário
         // 2 - reduce() ==> soma dois valores, item anterior e o atual (valor inicial = 0 [, 0])
         return this.items
-                .map(item => item.value())
-                .reduce((prev, value) => prev + value, 0)
+            .map(item => item.value())
+            .reduce((prev, value) => prev + value, 0)
     }
 
 }

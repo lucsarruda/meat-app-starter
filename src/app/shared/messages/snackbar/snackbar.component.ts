@@ -29,13 +29,11 @@ import 'rxjs/add/operator/switchMap';
 })
 export class SnackbarComponent implements OnInit {
 
-  message: string = 'Hello there!';
+  message = 'Hello there!';
 
-  snackVisibility: string = 'hidden';
-
+  snackVisibility = 'hidden';
 
   constructor(private notificationService: NotificationService) { }
-
 
   ngOnInit() {
     this.notificationService.notifier
