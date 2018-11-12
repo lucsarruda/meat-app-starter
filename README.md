@@ -1,5 +1,7 @@
 # Meat - Angular App Starter - [Demo](https://tiagoboeing.github.io/meat-app-starter/)
 
+Esta é uma aplicação destinada a práticas do curso de Angular na Udemy. (https://www.udemy.com/angular-pt/)
+
 <p>O primeiro acesso pode levar alguns segundos, já que o Heroku 'desliga' instâncias que ficam 30 minutos sem requisições. Front-end e back-end (API) estão em instâncias separadas, sendo assim a regra se aplica a ambos.</p>
 
 > Backend no Heroku. Aguarde alguns segundos para a instância ser ativada!**
